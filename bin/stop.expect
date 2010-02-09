@@ -1,0 +1,5 @@
+spawn rake attach
+expect "rTorrent"
+send ""
+expect "dtach terminating"
+expect eof

@@ -1,0 +1,6 @@
+*.diff
+*.log
+*.swp
+*.tmp
+files
+tmp
