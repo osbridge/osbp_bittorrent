@@ -38,7 +38,7 @@ end
 
 desc "Pull torrent files from opensourcebridge.org to here"
 task :pull do
-  sh "rsync -uvax --stats --progress #{@files_server}:#{Dir.pwd} ."
+  sh "rsync -vax --partial --stats --progress #{@files_server}:#{@files_dir} ."
 end
 
 desc "Update cron to start server on boot"
