@@ -33,7 +33,7 @@ task :connect => :attach
 
 task :_serve do
   mkdir_p @rtorrent_session
-  exec "rtorrent -s #{@rtorrent_session} -o cwd=#{@files_dir},upload_rate=768,port_range=14305-14399 #{@files_dir}/*.torrent"
+  exec "rtorrent -s #{@rtorrent_session} -o cwd=#{@files_dir},upload_rate=768,port_range=14305-14399"
 end
 
 desc "Pull torrent files from opensourcebridge.org to here"
