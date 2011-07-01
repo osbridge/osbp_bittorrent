@@ -25,8 +25,8 @@ task :restart => [:stop, :start]
 
 desc "Attach to torrent server's console"
 task :attach do
-  puts '* Attaching to running session: CTRL-\ to detach, CTRL-q to stop'
-  exec "dtach -a #{@dtach_session}"
+  puts '* Attaching to running session: CTRL-t to detach, CTRL-q to stop'
+  exec %{tput smkx; dtach -a #{@dtach_session} -e "^T"; tput rmkx}
 end
 
 task :connect => :attach
